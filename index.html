@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Converter Bot</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f7fc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+            text-align: center;
+        }
+
+        .container {
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 40px;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            color: #4a90e2;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        label {
+            font-size: 1.1rem;
+            color: #333;
+            font-weight: 600;
+        }
+
+        input[type="file"] {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+            cursor: pointer;
+            background-color: #f8f8f8;
+        }
+
+        button[type="submit"] {
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #357ab7;
+        }
+
+        footer {
+            margin-top: 30px;
+            font-size: 1rem;
+            color: #888;
+        }
+
+        footer a {
+            color: #4a90e2;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Upload PDFs to Convert</h1>
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            <label for="file">Choose PDF files:</label>
+            <input type="file" name="file" accept=".pdf" multiple required>
+            <button type="submit">Upload PDFs</button>
+        </form>
+        <footer>
+            <p>Made with 💻 by <a href="https://www.linkedin.com/in/abhijeetkumar/" target="_blank">Abhijeet Kumar</a></p>
+        </footer>
+    </div>
+</body>
+
+</html>
+
